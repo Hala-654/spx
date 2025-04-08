@@ -1,0 +1,16 @@
+.products-page {
+  padding: 2rem;
+
+  .products-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #222;
+    text-align: center;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+  }
+}
