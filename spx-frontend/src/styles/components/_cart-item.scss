@@ -1,0 +1,40 @@
+@use "../../styles/base/variables" as *;
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+
+  img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+  input {
+    width: 60px;
+    padding: 0.3rem;
+    font-size: 0.9rem;
+    text-align: center;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.4rem;
+  }
+
+  button {
+    background: $accent-color;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: #e03e40;
+    }
+  }
+}
