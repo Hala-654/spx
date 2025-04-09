@@ -1,5 +1,5 @@
 const Footer = () => {
-  return <footer>© 2025 SPX E-Commerce</footer>;
+  return <footer>© 2025 SPX</footer>;
 };
 
 export default Footer;
