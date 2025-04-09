@@ -10,20 +10,18 @@ const Home = () => {
   const scrollLeft = () => {
     document
       .querySelector(".scroll-row")
-      .scrollBy({ left: -300, behavior: "smooth" });
+      .scrollBy({ left: -200, behavior: "smooth" });
   };
 
   const scrollRight = () => {
     document
       .querySelector(".scroll-row")
-      .scrollBy({ left: 300, behavior: "smooth" });
+      .scrollBy({ left: 200, behavior: "smooth" });
   };
   return (
-    // <div>
-    //   <h1 className="home__body">Welcome to SPX </h1>
-    // </div>
     <div className="home">
-      <h2>Featured Products</h2>
+      <h1>Welcome to SPX </h1>
+      <h2> Products</h2>
       <div className="scroll-container">
         <button className="scroll-btn left" onClick={scrollLeft}>
           ◀
