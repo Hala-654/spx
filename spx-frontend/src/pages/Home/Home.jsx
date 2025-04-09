@@ -20,7 +20,7 @@ const Home = () => {
   };
   return (
     <div className="home">
-      <h1>Welcome to SPX </h1>
+      <h1 className="home-background">Welcome to SPX </h1>
       <h2> Products</h2>
       <div className="scroll-container">
         <button className="scroll-btn left" onClick={scrollLeft}>
