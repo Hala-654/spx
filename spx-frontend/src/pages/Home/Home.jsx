@@ -1,12 +1,45 @@
+import { useNavigate } from "react-router-dom";
+import ProductCard from "../../components/ProductCard";
 import ProductList from "../../components/ProductList.jsx";
 import products from "../../data/products";
 import "../Home/Home.scss";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const scrollLeft = () => {
+    document
+      .querySelector(".scroll-row")
+      .scrollBy({ left: -300, behavior: "smooth" });
+  };
+
+  const scrollRight = () => {
+    document
+      .querySelector(".scroll-row")
+      .scrollBy({ left: 300, behavior: "smooth" });
+  };
   return (
-    <div>
-      <h1 className="home__body">Welcome to SPX </h1>
-      <ProductList products={products} />
+    // <div>
+    //   <h1 className="home__body">Welcome to SPX </h1>
+    // </div>
+    <div className="home">
+      <h2>Featured Products</h2>
+      <div className="scroll-container">
+        <button className="scroll-btn left" onClick={scrollLeft}>
+          ◀
+        </button>
+        <div className="scroll-row">
+          {products.slice(0, 10).map((product) => (
+            <ProductCard key={product._id} product={product} />
+          ))}
+        </div>
+        <button className="scroll-btn right" onClick={scrollRight}>
+          ▶
+        </button>
+      </div>
+      <button className="view-all" onClick={() => navigate("/products")}>
+        See All Products
+      </button>
     </div>
   );
 };
