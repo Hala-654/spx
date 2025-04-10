@@ -25,7 +25,6 @@ const ProductList = ({ product }) => {
           </Link>{" "}
           <h2>{product.name}</h2>
           <p>${product.price.toFixed(2)}</p>
-          <Link to={`/products/${product._id}`}>View Details</Link>
           <button className="product-button" onClick={handleAdd}>
             Add to Cart
           </button>
