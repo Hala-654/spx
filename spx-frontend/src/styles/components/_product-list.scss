@@ -1,6 +1,15 @@
+@use "../../styles/base/variables" as *;
+
 .product-list {
-  padding: 2rem 5rem;
-  margin: 2rem 5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include tablet {
+    justify-content: space-around;
+  }
 }
 
 .product-card {

@@ -27,7 +27,7 @@ const Home = () => {
           ◀
         </button>
         <div className="scroll-row">
-          {products.slice(0, 10).map((product) => (
+          {products.slice(0, 3).map((product) => (
             <ProductCard key={product._id} product={product} />
           ))}
         </div>

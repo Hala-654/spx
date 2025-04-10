@@ -1,7 +1,16 @@
+@use "../../styles/base/variables" as *;
+
 .home-background {
   background-color: #c38787;
   padding: 10rem 0;
   font-family: fantasy;
+  font-size: 3rem;
+  @include tablet {
+    font-size: 5rem;
+  }
+  @include desktop {
+    font-size: 7rem;
+  }
 }
 .scroll-container {
   position: relative;
@@ -11,10 +20,10 @@
 }
 .scroll-row {
   display: flex;
-  overflow-x: auto;
+  overflow-x: scroll;
   scroll-behavior: smooth;
-  gap: 1rem;
-  padding: 1rem 0;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
 }
 .scroll-btn {
   position: absolute;
