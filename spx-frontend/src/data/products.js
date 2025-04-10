@@ -20,6 +20,13 @@ const products = [
     description: "Compact and waterproof Bluetooth speaker for outdoor use.",
     price: 89.99,
   },
+  {
+    _id: "4",
+    name: "Smartwatch Men",
+    image: "../public/assets/smartwatch-2.webp",
+    description: "Track your health, workouts, and messages in style.",
+    price: 159.99,
+  },
 ];
 
 export default products;
