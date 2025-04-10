@@ -1,6 +1,60 @@
-.home {
-  &__body {
-    text-align: center;
-    padding: 10rem 0rem;
+@use "../../styles/base/variables" as *;
+
+.home-background {
+  background-color: #c38787;
+  padding: 10rem 0;
+  font-family: fantasy;
+  font-size: 3rem;
+  @include tablet {
+    font-size: 5rem;
+  }
+  @include desktop {
+    font-size: 7rem;
+  }
+}
+.scroll-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.scroll-row {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+.scroll-btn {
+  position: absolute;
+  background: #fff;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  &.left {
+    left: 0;
+  }
+  &.right {
+    right: 0;
+  }
+}
+.view-all {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.75rem 1.5rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: #555;
   }
 }

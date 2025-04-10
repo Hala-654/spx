@@ -1,7 +1,7 @@
 const CartItem = ({ item, updateQty, removeItem }) => {
   return (
     <div className="cart-item">
-      <img src={item.imageUrl} alt={item.name} />
+      <img src={item.image} alt={item.name} />
       <h4>{item.name}</h4>
       <p>${item.price}</p>
       <input

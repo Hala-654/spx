@@ -5,12 +5,15 @@
   padding: 1rem;
   display: flex;
   justify-content: space-between;
+  @include tablet {
+    font-size: 1.5rem;
+  }
+  @include desktop {
+    font-size: 2rem;
+  }
 
   &__left {
     flex-direction: row;
     gap: 1rem;
-  }
-  &__right {
-    justify-content: flex-end;
   }
 }

@@ -1,4 +1,19 @@
-$primary-color: #072c64;
-$accent-color: #ff6600;
+$primary-color: rgb(21, 17, 17);
+$accent-color: #8800ff;
+$font-black: black;
+$font-grey: #666;
+$font-white: white;
+
 $border-radius: 0.5rem;
 $font-size-base: 2rem;
+
+@mixin tablet {
+  @media screen and (min-width: 48rem) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: 80rem) {
+    @content;
+  }
+}

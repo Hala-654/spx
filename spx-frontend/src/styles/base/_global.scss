@@ -1,3 +1,5 @@
+@use "../base/variables" as *;
+
 * {
   margin: auto 0;
   padding: 0;
@@ -8,10 +10,10 @@ body {
   background-color: #f7f7f7;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: $font-grey;
 }
 a {
-  color: white;
+  color: $font-white;
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem;
@@ -19,4 +21,29 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+h1,
+h2 {
+  margin-bottom: 0.5rem 1rem;
+  padding: 1.2rem;
+  text-align: center;
+  color: $font-black;
+  font-weight: 400;
+}
+h3 {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  color: $font-black;
+}
+h4 {
+  flex: 2;
+  font-size: 1rem;
+  margin: 0;
+  color: $font-black;
+}
+p {
+  flex: 1;
+  font-weight: 500;
+  color: $font-grey;
+  margin: 0;
 }
