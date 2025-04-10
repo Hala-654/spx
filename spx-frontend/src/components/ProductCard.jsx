@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import Toast from "./Toast";
 import "../styles/components/_product-card.scss";
 
 const ProductCard = ({ product }) => {
-  const { name, price, image } = product;
+  const { name, price, image, _id } = product;
   const { addToCart } = useCart();
   const [showToast, setShowToast] = useState(false);
 
@@ -14,7 +15,9 @@ const ProductCard = ({ product }) => {
   };
   return (
     <div className="product-card">
-      <img src={image} alt={name} className="product-image" />
+      <Link to={`/products/${product._id}`}>
+        <img src={product.image} alt={product.name} className="product-image" />
+      </Link>{" "}
       <div className="product-info">
         <h2 className="product-name">{name}</h2>
         <p className="product-price">${price.toFixed(2)}</p>

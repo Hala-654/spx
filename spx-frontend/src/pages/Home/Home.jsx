@@ -35,7 +35,7 @@ const Home = () => {
           ▶
         </button>
       </div>
-      <button className="view-all" onClick={() => navigate("/products/:id")}>
+      <button className="view-all" onClick={() => navigate("/products")}>
         See All Products
       </button>
     </div>
